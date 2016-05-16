@@ -1,11 +1,11 @@
 PyGame Challenge
 ----------------
 
-*Matrix Digital Rain*
+**Matrix Digital Rain**
 
 This challenge focuses on recreating the "raining code" sequence from The Matrix. 
 
-*Challenge*
+**Challenge**
 
 Recreate the digital rain sequence from The Matrix. 
 
