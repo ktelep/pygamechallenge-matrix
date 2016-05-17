@@ -16,7 +16,8 @@ class textblock():
         self.y_pos = y_pos
         self.cur_color = 0
         self.rect = None
-        self.color_prog = [(250, 250, 250),
+        self.color_prog = [(255, 255, 255),
+                           (250, 250, 250),
                            (150, 150, 150),
                            (125, 250, 125),
                            (0, 250, 0),
@@ -120,6 +121,9 @@ def main():
         background = background.convert()
         background.fill((0, 0, 0))
 
+        # Create our clock (locking to 60FPS)
+        clock = pygame.time.Clock()
+
         # Draw our lines
         font = pygame.font.Font("resources/fonts/matrix.ttf", 24)
 
@@ -130,6 +134,7 @@ def main():
         # Blit everything to the screen
         screen.blit(background, (0, 0))
         pygame.display.flip()
+        clock.tick(60)
 
         # Event loop
         while 1:
@@ -155,6 +160,8 @@ def main():
 
             screen.blit(background, (0, 0))
             pygame.display.flip()
+            clock.tick(60)
+            
 
 
 if __name__ == '__main__':
